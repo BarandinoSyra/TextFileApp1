@@ -48,6 +48,7 @@
             txtMI = new TextBox();
             label10 = new Label();
             txtContactNo = new TextBox();
+            btnRecord = new Button();
             SuspendLayout();
             // 
             // label1
@@ -102,7 +103,7 @@
             btnRegister.BackColor = Color.DarkGray;
             btnRegister.FlatStyle = FlatStyle.Flat;
             btnRegister.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnRegister.Location = new Point(627, 196);
+            btnRegister.Location = new Point(263, 198);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(133, 29);
             btnRegister.TabIndex = 5;
@@ -240,12 +241,26 @@
             txtContactNo.Size = new Size(214, 25);
             txtContactNo.TabIndex = 19;
             // 
+            // btnRecord
+            // 
+            btnRecord.BackColor = Color.DarkGray;
+            btnRecord.FlatStyle = FlatStyle.Flat;
+            btnRecord.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnRecord.Location = new Point(402, 198);
+            btnRecord.Name = "btnRecord";
+            btnRecord.Size = new Size(133, 29);
+            btnRecord.TabIndex = 20;
+            btnRecord.Text = "Records";
+            btnRecord.UseVisualStyleBackColor = false;
+            btnRecord.Click += btnRecord_Click;
+            // 
             // FrmRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(800, 261);
+            ClientSize = new Size(800, 248);
+            Controls.Add(btnRecord);
             Controls.Add(txtContactNo);
             Controls.Add(label10);
             Controls.Add(txtMI);
@@ -294,5 +309,6 @@
         private TextBox txtMI;
         private Label label10;
         private TextBox txtContactNo;
+        private Button btnRecord;
     }
 }

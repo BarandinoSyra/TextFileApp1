@@ -90,7 +90,7 @@ namespace TextFileApp
                "Birthday: " + birthday,
                "Contact No." + contactNo
            };
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string docPath = Application.StartupPath;
             string fileName = studentNo + ".txt";
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, fileName)))
             {
@@ -100,7 +100,13 @@ namespace TextFileApp
                 }
             }
             MessageBox.Show("Registration text file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+        }
+
+        private void btnRecord_Click(object sender, EventArgs e)
+        {
+            FrmStudentRecord studentRecordForm = new FrmStudentRecord();
+            studentRecordForm.Show(this); 
+            this.Hide();
         }
     }
 }
